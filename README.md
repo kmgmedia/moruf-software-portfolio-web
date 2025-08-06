@@ -34,3 +34,26 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Using the Assets Folder for Images
+
+This project uses an `assets` folder at the root of the repository (outside of `public`) for all image files. This is different from the default Next.js setup, which expects static images in the `public` directory.
+
+### How to Use Images from the Assets Folder
+
+1. Place your images in the `assets` folder at the root of the project.
+2. Import images directly into your components using ES6 import syntax. For example:
+
+```tsx
+import myImage from '../../assets/my-image.png';
+import Image from 'next/image';
+
+<Image src={myImage} alt="Description" width={400} height={300} />
+```
+
+- You must use a supported image loader (the default Next.js loader works for local imports).
+- This approach enables image optimization and type safety with TypeScript.
+
+### Note
+- The `public/assets` folder is **not used** and has been removed.
+- Only use the root-level `assets` folder for your images.
