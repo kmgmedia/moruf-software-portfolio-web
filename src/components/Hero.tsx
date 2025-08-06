@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
         </h1>
       </div>
 
-      <h2 className="text-lg sm:text-2xl md:text-3xl font-bold text-[#9ea3ae] mb-2">
+      <h2 className="text-lg sm:text-2xl md:text-2xl font-bold text-[#9ea3ae] mb-2">
         Software Engineer with DevOps Experience
       </h2>
 
@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
         className="inline-flex items-center gap-2 bg-orange-400 hover:bg-orange-500 text-white font-bold px-8 py-3 rounded-lg text-base uppercase tracking-widest transition-colors shadow-lg"
       >
         View Resume
-        <img src="/assets/icon.svg" alt="Resume Icon" className="h-5 w-5" />
+        <img src="/assets/arrowrighticon.png" alt="Resume Icon" className="h-5 w-5" />
       </a>
     </section>
   );
