@@ -31,8 +31,8 @@ const Header: React.FC<HeaderProps> = () => {
               href={link.href}
               className={`${
                 isContact
-                  ? "border-2 border-white text-white rounded-full px-4 py-1.5 hover:bg-orange-400 hover:text-black transition-all"
-                  : "text-white hover:text-orange-400"
+                  ? "border-2 border-[#9ea3ae] text-[#9ea3ae] rounded-full px-4 py-1.5 hover:bg-orange-400 hover:text-black transition-all"
+                  : "text-[#9ea3ae] hover:text-white"
               } font-medium`}
             >
               {link.name}

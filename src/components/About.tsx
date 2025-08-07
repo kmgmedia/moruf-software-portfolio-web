@@ -67,7 +67,7 @@ const About: React.FC = () => {
         {stacks.map((stack) => (
           <div
             key={stack.title}
-            className="bg-[#212936] rounded-xl shadow-lg p-8 flex flex-col items-center text-center border border-orange-400/20 transition-all duration-300 hover:scale-[1.03] hover:shadow-xl hover:border-orange-400/60 hover:ring-2 hover:ring-orange-400/30 hover:bg-[#242b3d]"
+            className="bg-[#212936] rounded-xl shadow-lg p-6 flex flex-col items-start text-left border border-orange-400/20 transition-all duration-300 hover:scale-[1.03] hover:shadow-xl hover:border-orange-400/60 hover:ring-2 hover:ring-orange-400/30 hover:bg-[#242b3d]"
           >
             <img
               src={stack.icon}

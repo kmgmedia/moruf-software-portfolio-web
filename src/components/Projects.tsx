@@ -35,7 +35,10 @@ const projects = [
 
 const Projects: React.FC = () => {
   return (
-    <section id="projects" className="w-full bg-[#18162b] py-16 px-4 flex flex-col items-center">
+    <section
+      id="projects"
+      className="w-full bg-[#020021] py-16 px-4 flex flex-col items-center"
+    >
       <h2 className="text-3xl sm:text-4xl font-bold text-white mb-2 text-center">
         Select <span className="text-orange-400">Projects</span>
       </h2>
@@ -48,8 +51,12 @@ const Projects: React.FC = () => {
             key={project.title}
             className="bg-[#212936] rounded-xl shadow-lg p-8 flex flex-col items-start border border-orange-400/20"
           >
-            <h4 className="text-xl font-bold text-orange-400 mb-2">{project.title}</h4>
-            <p className="text-[#9ea3ae] mb-2 text-base font-semibold">{project.description}</p>
+            <h4 className="text-xl font-bold text-orange-400 mb-2">
+              {project.title}
+            </h4>
+            <p className="text-[#9ea3ae] mb-2 text-base font-semibold">
+              {project.description}
+            </p>
             <p className="text-[#9ea3ae] mb-4 text-sm">{project.details}</p>
             <div className="flex flex-wrap gap-2 mb-4">
               {project.techs.map((tech) => (
@@ -69,7 +76,11 @@ const Projects: React.FC = () => {
                 className="inline-flex items-center gap-2 bg-orange-400 hover:bg-orange-500 text-white font-bold px-4 py-2 rounded-md text-xs uppercase tracking-widest transition-colors shadow"
               >
                 Live Demo
-                <img src="/assets/external-link.svg" alt="Live Demo" className="h-4 w-4" />
+                <img
+                  src="/assets/external_link.png"
+                  alt="Live Demo"
+                  className="h-5 w-5"
+                />
               </a>
               <a
                 href={project.github}
@@ -78,7 +89,11 @@ const Projects: React.FC = () => {
                 className="inline-flex items-center gap-2 border border-orange-400 text-orange-400 font-bold px-4 py-2 rounded-md text-xs uppercase tracking-widest transition-colors shadow hover:bg-orange-400 hover:text-white"
               >
                 GitHub
-                <img src="/assets/github.svg" alt="GitHub" className="h-4 w-4" />
+                <img
+                  src="/assets/github.png"
+                  alt="GitHub"
+                  className="h-5 w-5"
+                />
               </a>
             </div>
           </div>
