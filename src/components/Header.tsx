@@ -1,8 +1,6 @@
 import React from "react";
 import Image from "next/image";
 
-interface HeaderProps {}
-
 const navLinks = [
   { name: "Home", href: "#home" },
   { name: "About Me", href: "#about" },
@@ -10,7 +8,7 @@ const navLinks = [
   { name: "Contact", href: "#contact" },
 ];
 
-const Header: React.FC<HeaderProps> = () => {
+const Header: React.FC = () => {
   return (
     <header className="w-full flex items-center justify-between px-90 py-4 bg-transparent fixed top-6 left-0 z-50 backdrop-blur-md">
       {/* Logo on the left */}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, MouseEvent } from "react"; // import MouseEvent type explicitly
 import { useTheme } from "next-themes";
 import {
   Cloud,
@@ -53,7 +53,8 @@ export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
       href: undefined,
       target: undefined,
       rel: undefined,
-      onClick: (e: any) => e.preventDefault(),
+      // Fix: Specify event type here instead of any
+      onClick: (e: MouseEvent<HTMLAnchorElement>) => e.preventDefault(),
     },
   });
 };
@@ -80,7 +81,6 @@ export function IconCloud({ iconSlugs }: DynamicCloudProps) {
     );
   }, [data, theme]);
 
-  // Only render the cloud if icons have been loaded
   if (!renderedIcons) return null;
 
   return <Cloud {...cloudProps}>{renderedIcons}</Cloud>;

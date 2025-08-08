@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import dynamic from "next/dynamic";
 import { IconCloud } from "@/components/ui/interactive-icon-cloud";
 
 // Dynamically import IconCloud to avoid SSR issues
