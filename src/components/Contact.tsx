@@ -1,41 +1,47 @@
 import React from "react";
+import Image from "next/image";
 
 const contacts = [
   {
     name: "Email",
     value: "morufbadebola@gmail.com",
     href: "mailto:morufbadebola@gmail.com",
-    icon: "/assets/email.svg",
+    icon: "/assets/email-icon23.png",
   },
   {
     name: "LinkedIn",
     value: "moruf-adebola",
     href: "https://www.linkedin.com/in/moruf-adebola/",
-    icon: "/assets/linkedin.svg",
+    icon: "/assets/linkedin-icon1.png",
   },
   {
     name: "GitHub",
     value: "kmgmedia",
     href: "https://github.com/kmgmedia",
-    icon: "/assets/github.svg",
+    icon: "/assets/github-icon1.png",
   },
   {
-    name: "X",
+    name: "X (Twitter)",
     value: "NFT_KingM",
     href: "https://x.com/NFT_KingM",
-    icon: "/assets/x.svg",
+    icon: "/assets/x-icon1.png",
   },
 ];
 
 const Contact: React.FC = () => {
   return (
-    <section id="contact" className="w-full bg-[#020021] py-16 px-4 flex flex-col items-center">
+    <section
+      id="contact"
+      className="w-full bg-[#020021] py-16 px-4 flex flex-col items-center"
+    >
       <h2 className="text-3xl sm:text-4xl font-bold text-white mb-2 text-center">
         Get in <span className="text-orange-400">Touch</span>
       </h2>
-      <h3 className="text-lg sm:text-xl font-semibold text-[#cab1b1] mb-8 text-center">
-        Open to projects, collabs, or even just a friendly chat—hit me up anytime!
+      <h3 className="text-lg sm:text-xl font-medium text-[#cab1b1] mb-8 text-center max-w-2xl">
+        Open to projects, collabs, or even just a friendly chat — hit me up
+        anytime!
       </h3>
+
       <div className="w-full max-w-4xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         {contacts.map((contact) => (
           <a
@@ -43,11 +49,21 @@ const Contact: React.FC = () => {
             href={contact.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#212936] rounded-xl shadow-lg p-6 flex flex-col items-center border border-orange-400/20 hover:bg-orange-400/10 transition-colors"
+            className="bg-[#212936] rounded-xl shadow-lg p-6 flex flex-col items-center border border-orange-400/20 hover:bg-orange-400/10 transition-colors text-center"
           >
-            <img src={contact.icon} alt={contact.name} className="h-10 w-10 mb-3" />
-            <span className="text-orange-400 font-bold text-lg mb-1">{contact.name}</span>
-            <span className="text-white text-base break-all">{contact.value}</span>
+            <Image
+              src={contact.icon}
+              alt={`${contact.name} icon`}
+              width={40}
+              height={40}
+              className="mb-3"
+            />
+            <span className="text-orange-400 font-bold text-lg mb-1">
+              {contact.name}
+            </span>
+            <span className="text-white text-base break-words">
+              {contact.value}
+            </span>
           </a>
         ))}
       </div>

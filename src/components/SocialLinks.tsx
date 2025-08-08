@@ -1,14 +1,27 @@
 import React from "react";
+import Image from "next/image";
 
 interface SocialLinksProps {
   className?: string;
 }
 
 const socials = [
-  { name: "Email", href: "mailto:morufbadebola@gmail.com", icon: "/assets/email.svg" },
-  { name: "LinkedIn", href: "https://www.linkedin.com/in/moruf-adebola/", icon: "/assets/linkedin.svg" },
-  { name: "GitHub", href: "https://github.com/kmgmedia", icon: "/assets/github.svg" },
-  { name: "X", href: "https://x.com/NFT_KingM", icon: "/assets/x.svg" },
+  {
+    name: "Email",
+    href: "mailto:morufbadebola@gmail.com",
+    icon: "/assets/email-icon.png",
+  },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/moruf-adebola/",
+    icon: "/assets/x-avatare.png",
+  },
+  {
+    name: "GitHub",
+    href: "https://github.com/kmgmedia",
+    icon: "/assets/github-icon.png",
+  },
+  { name: "X", href: "https://x.com/NFT_KingM", icon: "/assets/x-avatare.png" },
 ];
 
 const SocialLinks: React.FC<SocialLinksProps> = ({ className = "" }) => (
@@ -22,7 +35,7 @@ const SocialLinks: React.FC<SocialLinksProps> = ({ className = "" }) => (
         aria-label={social.name}
         className="hover:scale-110 transition-transform"
       >
-        <img src={social.icon} alt={social.name} className="h-7 w-7" />
+        <Image src={social.icon} alt={social.name} width={28} height={28} />
       </a>
     ))}
   </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 interface HeaderProps {}
 
@@ -14,10 +15,12 @@ const Header: React.FC<HeaderProps> = () => {
     <header className="w-full flex items-center justify-between px-90 py-4 bg-transparent fixed top-6 left-0 z-50 backdrop-blur-md">
       {/* Logo on the left */}
       <a href="#home" className="flex items-center gap-3">
-        <img
+        <Image
           src="/assets/kmgmediaogo564.png"
           alt="Logo"
-          className="h-8 w-auto"
+          height={32}
+          width={128}
+          className="w-auto"
         />
       </a>
 
@@ -44,10 +47,12 @@ const Header: React.FC<HeaderProps> = () => {
       {/* Mobile menu hamburger icon + logo on small screens */}
       <div className="md:hidden flex items-center gap-4">
         <a href="#home" className="flex items-center">
-          <img
+          <Image
             src="/assets/kmgmediaogo564.png"
             alt="Logo"
-            className="h-8 w-auto"
+            height={32}
+            width={128}
+            className="w-auto"
           />
         </a>
         <button

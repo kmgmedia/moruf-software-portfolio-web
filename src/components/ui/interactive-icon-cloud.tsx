@@ -80,10 +80,8 @@ export function IconCloud({ iconSlugs }: DynamicCloudProps) {
     );
   }, [data, theme]);
 
-  return (
-    // @ts-ignore
-    <Cloud {...cloudProps}>
-      <>{renderedIcons}</>
-    </Cloud>
-  );
+  // Only render the cloud if icons have been loaded
+  if (!renderedIcons) return null;
+
+  return <Cloud {...cloudProps}>{renderedIcons}</Cloud>;
 }

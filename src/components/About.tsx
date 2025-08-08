@@ -1,6 +1,5 @@
 import React from "react";
-
-
+import Image from "next/image";
 
 const stacks = [
   {
@@ -56,23 +55,29 @@ const About: React.FC = () => {
 
         {/* Profile Image */}
         <div className="flex-shrink-0 flex items-center justify-center">
-          <img
+          <Image
             src="/assets/morufimg2.png"
             alt="Moruf Adebola profile"
-            className="w-90 h-90 md:w-90 md:h-90 shadow-lg"
+            width={300}
+            height={300}
+            className="rounded-xl shadow-lg object-cover"
           />
         </div>
       </div>
+
+      {/* Tech Stacks Cards */}
       <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-6 mb-18 mt-10">
         {stacks.map((stack) => (
           <div
             key={stack.title}
             className="bg-[#212936] rounded-xl shadow-lg p-6 flex flex-col items-start text-left border border-orange-400/20 transition-all duration-300 hover:scale-[1.03] hover:shadow-xl hover:border-orange-400/60 hover:ring-2 hover:ring-orange-400/30 hover:bg-[#242b3d]"
           >
-            <img
+            <Image
               src={stack.icon}
               alt={stack.title}
-              className="h-14 w-14 mb-4 object-contain"
+              width={56}
+              height={56}
+              className="mb-4 object-contain"
             />
             <h4 className="text-xl font-bold text-orange-400 mb-2">
               {stack.title}

@@ -1,11 +1,15 @@
 import React from "react";
+import Image from "next/image";
+import dynamic from "next/dynamic";
 import { IconCloud } from "@/components/ui/interactive-icon-cloud";
-import { fetchSimpleIcons } from "react-icon-cloud";
+
+// Dynamically import IconCloud to avoid SSR issues
+
 
 const stacks = [
   {
     title: "Frontend",
-    icon: "/assets/frontend.png",
+    icon: "/assets/x-avatare.png",
     techs: [
       "HTML",
       "CSS",
@@ -20,7 +24,7 @@ const stacks = [
   },
   {
     title: "Backend",
-    icon: "/assets/backend.png",
+    icon: "/assets/x-avatare.png",
     // description:
     //   "Powering applications with strong backend logic, clean APIs, and seamless data flow — built with Node.js, TypeScript, and flexible databases.",
     techs: [
@@ -36,7 +40,7 @@ const stacks = [
   },
   {
     title: "DevOps",
-    icon: "/assets/devops.png",
+    icon: "/assets/x-avatare.png",
     description: "",
     techs: [
       "AWS",
@@ -107,10 +111,13 @@ const TechStacks: React.FC = () => {
             key={stack.title}
             className="bg-[#212936] rounded-xl shadow-lg p-8 flex flex-col items-center text-center border border-orange-400/20"
           >
-            <img
+            <Image
               src={stack.icon}
               alt={stack.title}
-              className="h-16 w-16 mb-4"
+              width={64}
+              height={64}
+              className="mb-4"
+              loading="lazy"
             />
             <h4 className="text-xl font-bold text-orange-400 mb-2">
               {stack.title}

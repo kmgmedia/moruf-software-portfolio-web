@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import Image from "next/image";
 
 const projects = [
   {
@@ -7,17 +9,31 @@ const projects = [
       "End-to-End REST API – A Complete Backend Solution with Review Management, User Roles & Access Control.",
     details:
       "Node.js backend for the Byway web product review platform, built using Express.js. Features product listings, user-submitted reviews, and seamless frontend communication.",
-    techs: ["MongoDB", "Node.js", "Express.js", "Mongoose", "Postman", "GitHub Action", "Vercel"],
+    techs: [
+      "MongoDB",
+      "Node.js",
+      "Express.js",
+      "Mongoose",
+      "Postman",
+      "GitHub Action",
+      "Vercel",
+    ],
     live: "#",
     github: "#",
   },
   {
     title: "Byc (eCommerce Web)",
-    description:
-      "Reimagining Online Retail – A Complete Shopping Experience.",
+    description: "Reimagining Online Retail – A Complete Shopping Experience.",
     details:
       "A robust and intuitive eCommerce frontend designed for seamless product discovery, secure checkout, and real-time inventory visibility.",
-    techs: ["HTML", "CSS/Sass", "Node.js", "JavaScript", "MongoDB", "Bootstrap"],
+    techs: [
+      "HTML",
+      "CSS/Sass",
+      "Node.js",
+      "JavaScript",
+      "MongoDB",
+      "Bootstrap",
+    ],
     live: "#",
     github: "#",
   },
@@ -27,7 +43,14 @@ const projects = [
       "Conversational Intelligence Interface – Chatbot UI Powered by GPT-3.",
     details:
       "Fast, accessible frontend bridging users and GPT-3 with smooth inputs, real-time flow, and a crisp, device-friendly layout.",
-    techs: ["HTML", "CSS/Sass", "Node.js", "JavaScript", "MongoDB", "Bootstrap"],
+    techs: [
+      "HTML",
+      "CSS/Sass",
+      "Node.js",
+      "JavaScript",
+      "MongoDB",
+      "Bootstrap",
+    ],
     live: "#",
     github: "#",
   },
@@ -76,10 +99,11 @@ const Projects: React.FC = () => {
                 className="inline-flex items-center gap-2 bg-orange-400 hover:bg-orange-500 text-white font-bold px-4 py-2 rounded-md text-xs uppercase tracking-widest transition-colors shadow"
               >
                 Live Demo
-                <img
+                <Image
                   src="/assets/external_link.png"
                   alt="Live Demo"
-                  className="h-5 w-5"
+                  width={20}
+                  height={20}
                 />
               </a>
               <a
@@ -89,10 +113,11 @@ const Projects: React.FC = () => {
                 className="inline-flex items-center gap-2 border border-orange-400 text-orange-400 font-bold px-4 py-2 rounded-md text-xs uppercase tracking-widest transition-colors shadow hover:bg-orange-400 hover:text-white"
               >
                 GitHub
-                <img
+                <Image
                   src="/assets/github.png"
                   alt="GitHub"
-                  className="h-5 w-5"
+                  width={20}
+                  height={20}
                 />
               </a>
             </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Hero: React.FC = () => {
   return (
@@ -7,9 +8,11 @@ const Hero: React.FC = () => {
       className="flex flex-col items-center justify-center min-h-[100vh] pt-32 pb-16 px-4 text-center bg-[#020021] w-full"
     >
       <div className="flex flex-col items-center mb-4">
-        <img
+        <Image
           src="/assets/Ellipse 133.png"
           alt="Decorative Ellipse"
+          width={128} // adjust if needed
+          height={128} // adjust if needed
           className="w-24 h-24 md:w-32 md:h-32 mb-2 object-contain"
         />
         <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white mt-2">
@@ -34,7 +37,12 @@ const Hero: React.FC = () => {
         className="inline-flex items-center gap-2 bg-orange-400 hover:bg-orange-500 text-white font-bold px-8 py-3 rounded-lg text-base uppercase tracking-widest transition-colors shadow-lg"
       >
         View Resume
-        <img src="/assets/arrowrighticon.png" alt="Resume Icon" className="h-5 w-5" />
+        <Image
+          src="/assets/arrowrighticon.png"
+          alt="Resume Icon"
+          width={24} // same as w-5
+          height={24} // same as h-5
+        />
       </a>
     </section>
   );
