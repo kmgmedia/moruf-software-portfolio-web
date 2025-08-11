@@ -10,7 +10,7 @@ const navLinks = [
 
 const Header: React.FC = () => {
   return (
-    <header className="w-full flex items-center justify-between px-90 py-4 bg-transparent fixed top-6 left-0 z-50 backdrop-blur-md">
+    <header className="w-full flex items-center justify-between px-62 py-4 bg-transparent fixed top-6 left-0 z-50 backdrop-blur-md">
       {/* Logo on the left */}
       <a href="#home" className="flex items-center gap-3">
         <Image

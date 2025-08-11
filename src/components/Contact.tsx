@@ -34,38 +34,42 @@ const Contact: React.FC = () => {
       id="contact"
       className="w-full bg-[#020021] py-16 px-4 flex flex-col items-center"
     >
-      <h2 className="text-3xl sm:text-4xl font-bold text-white mb-2 text-center">
+      <h2 className="text-3xl sm:text-4xl font-bold text-white mb-10 text-center">
         Get in <span className="text-orange-400">Touch</span>
       </h2>
-      <h3 className="text-lg sm:text-xl font-medium text-[#cab1b1] mb-8 text-center max-w-2xl">
-        Open to projects, collabs, or even just a friendly chat — hit me up
-        anytime!
-      </h3>
+      <div className="bg-[#0B0A0F] max-w-10xl rounded-xl shadow-lg p-8 flex flex-col items-center border border-[#212936]">
+        <h3 className="text-lg sm:text-xl font-medium text-[#cab1b1] mb-8 text-center">
+          Open to projects, collabs, or even just a friendly chat — hit me up
+          anytime!
+        </h3>
 
-      <div className="w-full max-w-4xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-        {contacts.map((contact) => (
-          <a
-            key={contact.name}
-            href={contact.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[#212936] rounded-xl shadow-lg p-6 flex flex-col items-center border border-orange-400/20 hover:bg-orange-400/10 transition-colors text-center"
-          >
-            <Image
-              src={contact.icon}
-              alt={`${contact.name} icon`}
-              width={40}
-              height={40}
-              className="mb-3"
-            />
-            <span className="text-orange-400 font-bold text-lg mb-1">
-              {contact.name}
-            </span>
-            <span className="text-white text-base break-words">
-              {contact.value}
-            </span>
-          </a>
-        ))}
+        <div className="w-full max-w-4xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8">
+          {contacts.map((contact) => (
+            <a
+              key={contact.name}
+              href={contact.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#212936] rounded-xl shadow-lg p-7 flex items-center border border-orange-400/20 hover:bg-orange-400/10 transition-colors text-center"
+            >
+              <Image
+                src={contact.icon}
+                alt={`${contact.name} icon`}
+                width={40}
+                height={40}
+                className="mr-3"
+              />
+              <div className="flex flex-col">
+                <span className="text-orange-400 font-bold text-lg flex items-start">
+                  {contact.name}
+                </span>
+                <span className="text-white text-base break-words">
+                  {contact.value}
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   );

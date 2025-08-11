@@ -17,6 +17,7 @@ const syne = Syne({
 export const metadata: Metadata = {
   title: "Moruf Adebola | Portfolio",
   description: "Crafted with passion by Moruf Adebola",
+  
 };
 
 export default function RootLayout({

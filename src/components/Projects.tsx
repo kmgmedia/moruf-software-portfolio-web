@@ -5,10 +5,11 @@ import Image from "next/image";
 const projects = [
   {
     title: "Byway Backend (GitHub Action)",
+
     description:
       "End-to-End REST API – A Complete Backend Solution with Review Management, User Roles & Access Control.",
     details:
-      "Node.js backend for the Byway web product review platform, built using Express.js. Features product listings, user-submitted reviews, and seamless frontend communication.",
+      "This is the Node.js backend for the Byway web product review platform, built using Express.js. It serves as the core API layer powering features like product listings, user-submitted reviews, and seamless frontend communication.Includes config for MongoDB and env setup, controllers for API logic, middleware for validation/auth, models for Mongoose schemas, and routes for API endpoints.",
     techs: [
       "MongoDB",
       "Node.js",
@@ -25,7 +26,7 @@ const projects = [
     title: "Byc (eCommerce Web)",
     description: "Reimagining Online Retail – A Complete Shopping Experience.",
     details:
-      "A robust and intuitive eCommerce frontend designed for seamless product discovery, secure checkout, and real-time inventory visibility.",
+      "A robust and intuitive eCommerce frontend designed to deliver seamless product discovery, secure checkout, and real-time inventory visibility. Users can explore products by category, manage their shopping carts, track orders, and complete payments with ease. Built with a focus on user flow, performance, and trust, the project leverages Bootstrap for responsive design, Sass for efficient CSS structuring, and vanilla JavaScript for smooth interactivity. ",
     techs: [
       "HTML",
       "CSS/Sass",
@@ -42,7 +43,41 @@ const projects = [
     description:
       "Conversational Intelligence Interface – Chatbot UI Powered by GPT-3.",
     details:
-      "Fast, accessible frontend bridging users and GPT-3 with smooth inputs, real-time flow, and a crisp, device-friendly layout.",
+      "Fast, accessible frontend bridging users and GPT-3 with smooth inputs, real-time flow, and a crisp, device-friendly layout. Built With Purpose: Crafted using HTML, CSS (Sass), and JavaScript, the UI leverages async JavaScript functions for API calls, dynamic DOM updates, and stateful conversation threads.",
+    techs: [
+      "HTML",
+      "CSS/Sass",
+      "Node.js",
+      "JavaScript",
+      "MongoDB",
+      "Bootstrap",
+    ],
+    live: "#",
+    github: "#",
+  },
+  {
+    title: "Byc (eCommerce Web)",
+    description: "Reimagining Online Retail – A Complete Shopping Experience.",
+    details:
+      "A robust and intuitive eCommerce frontend designed to deliver seamless product discovery, secure checkout, and real-time inventory visibility. Users can explore products by category, manage their shopping carts, track orders, and complete payments with ease. Built with a focus on user flow, performance, and trust, the project leverages Bootstrap for responsive design, Sass for efficient CSS structuring, and vanilla JavaScript for smooth interactivity. ",
+
+    techs: [
+      "HTML",
+      "CSS/Sass",
+      "Node.js",
+      "JavaScript",
+      "MongoDB",
+      "Bootstrap",
+    ],
+    live: "#",
+    github: "#",
+  },
+  {
+    title: "Byc (eCommerce Web)",
+    description: "Reimagining Online Retail – A Complete Shopping Experience.",
+    details:
+      "A robust and intuitive eCommerce frontend designed to deliver seamless product discovery, secure checkout, and real-time inventory visibility. Users can explore products by category, manage their shopping carts, track orders, and complete payments with ease. Built with a focus on user flow, performance, and trust, the project leverages Bootstrap for responsive design, Sass for efficient CSS structuring, and vanilla JavaScript for smooth interactivity. ",
+
     techs: [
       "HTML",
       "CSS/Sass",
@@ -60,28 +95,31 @@ const Projects: React.FC = () => {
   return (
     <section
       id="projects"
-      className="w-full bg-[#020021] py-16 px-4 flex flex-col items-center"
+      className="w-full bg-[#020021] py-30 px-4 flex flex-col items-center"
     >
       <h2 className="text-3xl sm:text-4xl font-bold text-white mb-2 text-center">
         Select <span className="text-orange-400">Projects</span>
       </h2>
-      <h3 className="text-lg sm:text-xl font-semibold text-[#cab1b1] mb-8 text-center">
+      <h3 className="text-lg sm:text-xl font-semibold text-[#cab1b1] mb-12 text-center">
         Handpicked projects reflecting my journey in tech and design.
       </h3>
-      <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-16">
         {projects.map((project) => (
           <div
             key={project.title}
-            className="bg-[#212936] rounded-xl shadow-lg p-8 flex flex-col items-start border border-orange-400/20"
+            className="bg-[#212936] max-w-10xl rounded-xl shadow-lg p-8 flex flex-col items-start border border-orange-400/20"
           >
             <h4 className="text-xl font-bold text-orange-400 mb-2">
               {project.title}
             </h4>
-            <p className="text-[#9ea3ae] mb-2 text-base font-semibold">
+            <p className="text-[#9ea3ae] mb-3 text-base font-semibold">
               {project.description}
             </p>
-            <p className="text-[#9ea3ae] mb-4 text-sm">{project.details}</p>
-            <div className="flex flex-wrap gap-2 mb-4">
+            {/* <p className="text-[#9ea3ae] mb-3 text-base font-semibold">
+              {project.moreDetails}
+            </p> */}
+            <p className="text-[#9ea3ae] mb-6 text-sm">{project.details}</p>
+            <div className="flex flex-wrap gap-2 mb-12">
               {project.techs.map((tech) => (
                 <span
                   key={tech}
@@ -110,7 +148,7 @@ const Projects: React.FC = () => {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 border border-orange-400 text-orange-400 font-bold px-4 py-2 rounded-md text-xs uppercase tracking-widest transition-colors shadow hover:bg-orange-400 hover:text-white"
+                className="inline-flex items-center gap-2 border border-orange-400 text-orange-400 font-bold px-4 py-2 rounded-md text-xs uppercase tracking-widest transition-colors shadow"
               >
                 GitHub
                 <Image

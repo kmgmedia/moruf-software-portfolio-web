@@ -8,7 +8,7 @@ import { IconCloud } from "@/components/ui/interactive-icon-cloud";
 const stacks = [
   {
     title: "Frontend",
-    icon: "/assets/x-avatare.png",
+    icon: "/assets/x-avatar1.png",
     techs: [
       "HTML",
       "CSS",
@@ -39,7 +39,7 @@ const stacks = [
   },
   {
     title: "DevOps",
-    icon: "/assets/x-avatare.png",
+    icon: "/assets/cloud13897.png",
     description: "",
     techs: [
       "AWS",
@@ -104,29 +104,31 @@ const TechStacks: React.FC = () => {
         Proficient in a wide range of modern technologies and frameworks,
         including but not limited to:
       </h3>
-      <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+      <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
         {stacks.map((stack) => (
           <div
             key={stack.title}
-            className="bg-[#212936] rounded-xl shadow-lg p-8 flex flex-col items-center text-center border border-orange-400/20"
+            className="bg-[#212936] rounded-xl shadow-lg p-4 flex flex-col items-start text-center border border-orange-400/20"
           >
-            <Image
-              src={stack.icon}
-              alt={stack.title}
-              width={64}
-              height={64}
-              className="mb-4"
-              loading="lazy"
-            />
-            <h4 className="text-xl font-bold text-orange-400 mb-2">
-              {stack.title}
-            </h4>
+            <div className="flex">
+              <Image
+                src={stack.icon}
+                alt={stack.title}
+                width={28}
+                height={28}
+                className="mr-3 mb-4"
+                loading="lazy"
+              />
+              <h4 className="text-xl font-bold text-orange-400 mb-2">
+                {stack.title}
+              </h4>
+            </div>
             <p className="text-[#9ea3ae] mb-4 text-base">{stack.description}</p>
-            <div className="flex flex-wrap gap-2 justify-center">
+            <div className="flex flex-wrap gap-1 justify-start">
               {stack.techs.map((tech) => (
                 <span
                   key={tech}
-                  className="bg-orange-400/10 text-orange-400 px-3 py-1 rounded text-xs font-semibold"
+                  className="bg-orange-400/10 text-orange-400 px-3 py-2 rounded text-xs font-semibold"
                 >
                   {tech}
                 </span>
