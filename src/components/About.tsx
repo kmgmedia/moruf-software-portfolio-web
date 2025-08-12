@@ -26,7 +26,7 @@ const About: React.FC = () => {
   return (
     <section
       id="about"
-      className="flex flex-col items-center justify-center gap-8 py-16 px-4 bg-[#020021] w-full"
+      className="flex flex-col items-center justify-center gap-8 py-0 px-4 bg-[#020021] w-full"
     >
       {/* Tech Stacks Title at the top center */}
       <div className="text-center">

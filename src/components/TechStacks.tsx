@@ -95,14 +95,14 @@ const TechStacks: React.FC = () => {
         Tech <span className="text-orange-400">Stacks</span>
       </h2>
       {/* 💡 IconCloud below the grid */}
-      <div className="relative flex h-full w-full max-w-[32rem] items-center justify-center overflow-hidden px-20 mx-auto">
+      <div className="relative flex h-full w-full max-w-[28rem] items-center justify-center overflow-hidden px-20 mx-auto">
         <IconCloud iconSlugs={iconSlugs} />
       </div>
       <h3 className="text-lg sm:text-xl font-semibold text-[#cab1b1] mb-8 text-center">
         Proficient in a wide range of modern technologies and frameworks,
         including but not limited to:
       </h3>
-      <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
+      <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-2 mb-12">
         {stacks.map((stack) => (
           <div
             key={stack.title}

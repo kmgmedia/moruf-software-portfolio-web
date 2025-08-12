@@ -20,7 +20,7 @@ const Testimonials: React.FC = () => {
       <h3 className="text-lg sm:text-xl font-semibold text-[#cab1b1] mb-4 text-center">
         What clients say about working with me
       </h3>
-      <div className="relative max-w-5xl rounded-xl shadow-lg p-4 flex flex-col items-end">
+      <div className="relative max-w-5xl rounded-xl p-4 flex flex-col items-end">
         <Image
           src={testimonial.icon}
           alt="Quote"
