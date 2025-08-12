@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={syne.variable}>
       <body>
-        <div className="min-h-screen flex flex-col antialiased font-syne">
+        <div className="bg-[#020021] min-h-screen flex flex-col antialiased font-syne">
           <Header />
           <main className="flex-grow">{children}</main>
           <footer className="w-full flex justify-center py-8 bg-transparent">

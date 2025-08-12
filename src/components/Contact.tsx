@@ -32,7 +32,7 @@ const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="w-full bg-[#020021] py-16 px-4 flex flex-col items-center"
+      className="w-full bg-[#020021] py-24 px-4 flex flex-col items-center"
     >
       <h2 className="text-3xl sm:text-4xl font-bold text-white mb-10 text-center">
         Get in <span className="text-orange-400">Touch</span>

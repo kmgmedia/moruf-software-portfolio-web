@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 
 const navLinks = [
@@ -9,9 +10,11 @@ const navLinks = [
 ];
 
 const Header: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <header className="w-full flex items-center justify-between px-62 py-4 bg-transparent fixed top-6 left-0 z-50 backdrop-blur-md">
-      {/* Logo on the left */}
+    <header className="w-full flex items-center justify-between px-16 py-4 bg-transparent fixed top-4 left-0 z-50 backdrop-blur-md">
+      {/* Logo */}
       <a href="#home" className="flex items-center gap-3">
         <Image
           src="/assets/kmgmediaogo564.png"
@@ -23,7 +26,7 @@ const Header: React.FC = () => {
       </a>
 
       {/* Desktop Navigation */}
-      <nav className="hidden md:flex gap-8 items-center">
+      <nav className="hidden md:flex gap-10 items-center">
         {navLinks.map((link) => {
           const isContact = link.name === "Contact";
           return (
@@ -42,37 +45,71 @@ const Header: React.FC = () => {
         })}
       </nav>
 
-      {/* Mobile menu hamburger icon + logo on small screens */}
-      <div className="md:hidden flex items-center gap-4">
-        <a href="#home" className="flex items-center">
-          <Image
-            src="/assets/kmgmediaogo564.png"
-            alt="Logo"
-            height={32}
-            width={128}
-            className="w-auto"
-          />
-        </a>
+      {/* Mobile Menu Icon */}
+      <div className="md:hidden">
         <button
           className="text-white focus:outline-none"
-          aria-label="Open menu"
+          aria-label="Toggle menu"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          <svg
-            width="48"
-            height="48"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
+          {isMenuOpen ? (
+            // Close Icon
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
               strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
+              stroke="currentColor"
+              className="w-8 h-8"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          ) : (
+            // Hamburger Icon
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="w-8 h-8"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          )}
         </button>
       </div>
+
+      {/* Mobile Menu Drawer */}
+      {isMenuOpen && (
+        <div className="absolute top-full left-0 w-full bg-black/80 backdrop-blur-md flex flex-col items-center py-6 gap-10 md:hidden">
+          {navLinks.map((link) => {
+            const isContact = link.name === "Contact";
+            return (
+              <a
+                key={link.name}
+                href={link.href}
+                className={`${
+                  isContact
+                    ? "border-2 border-[#9ea3ae] text-[#9ea3ae] rounded-full px-4 py-1.5 hover:bg-orange-400 hover:text-black transition-all"
+                    : "text-[#9ea3ae] hover:text-white"
+                } font-medium text-lg`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.name}
+              </a>
+            );
+          })}
+        </div>
+      )}
     </header>
   );
 };

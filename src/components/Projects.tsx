@@ -5,7 +5,6 @@ import Image from "next/image";
 const projects = [
   {
     title: "Byway Backend (GitHub Action)",
-
     description:
       "End-to-End REST API – A Complete Backend Solution with Review Management, User Roles & Access Control.",
     details:
@@ -35,15 +34,22 @@ const projects = [
       "MongoDB",
       "Bootstrap",
     ],
-    live: "#",
-    github: "#",
+    live: "https://byc-website-pi.vercel.app/",
+    github: "https://github.com/kmgmedia/BYC-Website",
   },
   {
     title: "GPT-3 Frontend",
     description:
       "Conversational Intelligence Interface – Chatbot UI Powered by GPT-3.",
-    details:
-      "Fast, accessible frontend bridging users and GPT-3 with smooth inputs, real-time flow, and a crisp, device-friendly layout. Built With Purpose: Crafted using HTML, CSS (Sass), and JavaScript, the UI leverages async JavaScript functions for API calls, dynamic DOM updates, and stateful conversation threads.",
+    details: `
+Fast, accessible frontend bridging users and GPT-3 with smooth inputs, real-time flow, and a crisp, device-friendly layout.
+
+Crafted using HTML, CSS (Sass), and JavaScript, the UI leverages async JavaScript functions for API calls, dynamic DOM updates, and stateful conversation threads.
+
+Key Interactions:
+- Typing indicators and smooth loading animations mimic real chat behavior.
+- Auto-scroll and real-time message rendering enhance user engagement.
+  `,
     techs: [
       "HTML",
       "CSS/Sass",
@@ -56,21 +62,25 @@ const projects = [
     github: "#",
   },
   {
-    title: "Byc (eCommerce Web)",
-    description: "Reimagining Online Retail – A Complete Shopping Experience.",
+    title: "Project Tracker (Dashboard App)",
+    description: "Live data. Smooth workflow. Seamless on any device.",
     details:
-      "A robust and intuitive eCommerce frontend designed to deliver seamless product discovery, secure checkout, and real-time inventory visibility. Users can explore products by category, manage their shopping carts, track orders, and complete payments with ease. Built with a focus on user flow, performance, and trust, the project leverages Bootstrap for responsive design, Sass for efficient CSS structuring, and vanilla JavaScript for smooth interactivity. ",
+      "A sleek, fully responsive dashboard built with React, TypeScript, Tailwind CSS, and Supabase, delivering secure authentication, lightning-fast performance, and real-time data syncing. Designed with a clean, modern UI, it adapts seamlessly to any device and empowers users with live insights and smooth interactions.",
 
     techs: [
-      "HTML",
-      "CSS/Sass",
+      "React.js",
+      "Next.js",
+      "Tailwind CSS",
       "Node.js",
       "JavaScript",
-      "MongoDB",
-      "Bootstrap",
+      "Express.js",
+      "Supabase",
+      "GitHub Action",
+      "Sonner",
+      "Vercel",
     ],
-    live: "#",
-    github: "#",
+    live: "https://dashboard-auth-full-stack.vercel.app/",
+    github: "https://github.com/kmgmedia/dashboard-auth-full-stack",
   },
   {
     title: "Byc (eCommerce Web)",
@@ -115,9 +125,6 @@ const Projects: React.FC = () => {
             <p className="text-[#9ea3ae] mb-3 text-base font-semibold">
               {project.description}
             </p>
-            {/* <p className="text-[#9ea3ae] mb-3 text-base font-semibold">
-              {project.moreDetails}
-            </p> */}
             <p className="text-[#9ea3ae] mb-6 text-sm">{project.details}</p>
             <div className="flex flex-wrap gap-2 mb-12">
               {project.techs.map((tech) => (

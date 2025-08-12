@@ -12,7 +12,7 @@ const Testimonials: React.FC = () => {
   return (
     <section
       id="testimonials"
-      className="w-full bg-[#020021]  py-16 px-4 flex flex-col items-center"
+      className="w-full bg-[#020021]  py-10 px-4 flex flex-col items-center"
     >
       <h2 className="text-3xl sm:text-4xl font-bold text-white mb-2 text-center">
         <span className="text-orange-400">Testimonials</span>

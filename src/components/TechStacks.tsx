@@ -23,9 +23,7 @@ const stacks = [
   },
   {
     title: "Backend",
-    icon: "/assets/x-avatare.png",
-    // description:
-    //   "Powering applications with strong backend logic, clean APIs, and seamless data flow — built with Node.js, TypeScript, and flexible databases.",
+    icon: "/assets/x-avatar2.png",
     techs: [
       "Node.js",
       "MongoDB",
