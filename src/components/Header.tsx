@@ -20,7 +20,7 @@ const Header: React.FC = () => {
           src="/assets/kmgmediaogo564.png"
           alt="Logo"
           height={32}
-          width={128}
+          width={132}
           className="w-auto"
         />
       </a>
