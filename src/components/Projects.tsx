@@ -113,11 +113,11 @@ const Projects: React.FC = () => {
       <h3 className="text-lg sm:text-xl font-semibold text-[#cab1b1] mb-12 text-center">
         Handpicked projects reflecting my journey in tech and design.
       </h3>
-      <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-16">
+      <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-16">
         {projects.map((project) => (
           <div
             key={project.title}
-            className="bg-[#212936] max-w-10xl rounded-xl shadow-lg p-8 flex flex-col items-start border border-orange-400/20"
+            className="bg-[#212936] max-w-6xl rounded-xl shadow-lg p-8 flex flex-col items-start border border-orange-400/20"
           >
             <h4 className="text-xl font-bold text-orange-400 mb-2">
               {project.title}
