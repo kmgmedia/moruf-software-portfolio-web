@@ -5,7 +5,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="flex flex-col items-center justify-center min-h-[100vh] pt-26 pb-16 px-4 text-center bg-[#020021] w-full"
+      className="flex flex-col items-center justify-center min-h-[100vh] pt-32 pb-16 px-4 text-center bg-[#020021] w-full"
     >
       <div className="flex flex-col items-center mb-4">
         <Image

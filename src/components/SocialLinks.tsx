@@ -29,31 +29,34 @@ const socials = [
 ];
 
 const SocialLinks: React.FC<SocialLinksProps> = ({ className = "" }) => (
-  <div className={`flex flex-col gap-12 ${className}`}>
+  <div className={`flex flex-col gap-14 px-4 sm:px-8 ${className}`}>
     {/* Top Section */}
-    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4 sm:gap-64">
+    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-8">
       {/* Logo */}
-      <a href="#home" className="flex items-center gap-3">
+      <a
+        href="#home"
+        className="flex justify-center sm:justify-start items-center"
+      >
         <Image
           src="/assets/kmgmediaogo564.png"
           alt="Logo"
           height={72}
           width={328}
-          className="w-auto max-w-[200px] sm:max-w-[250px]"
+          className="w-auto max-w-[150px] sm:max-w-[200px] md:max-w-[250px]"
         />
       </a>
 
       {/* Address */}
-      <h2 className="flex flex-col text-lg sm:text-2xl font-bold text-white">
+      <h2 className="flex flex-col text-center sm:text-left text-base sm:text-xl md:text-2xl font-bold text-white">
         Olivedele 101, SA <span>Johannesburg</span>
       </h2>
 
       {/* Contact + Social Icons */}
-      <div>
-        <h2 className="text-lg sm:text-2xl font-bold text-white mb-3">
+      <div className="flex flex-col items-center sm:items-end">
+        <h2 className="text-base sm:text-xl md:text-2xl font-bold text-white mb-3">
           +27 64 205 7309
         </h2>
-        <div className="flex gap-4 flex-wrap">
+        <div className="flex gap-4 flex-wrap justify-center sm:justify-end">
           {socials.map((social) => (
             <a
               key={social.name}
