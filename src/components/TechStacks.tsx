@@ -98,6 +98,9 @@ const TechStacks: React.FC = () => {
       <div className="relative flex h-full w-full max-w-[28rem] items-center justify-center overflow-hidden px-20 mx-auto">
         <IconCloud iconSlugs={iconSlugs} />
       </div>
+      {/* ===== White Glow Overlay (Added Here) ===== */}
+      <div className="absolute left-7/12 top-8/4 w-[180px] h-[180px] bg-white/20 rounded-full blur-[110px] z-0"></div>
+      {/* ===== End White Glow Overlay ===== */}
       <h3 className="text-lg sm:text-xl font-semibold text-[#cab1b1] mb-8 text-center">
         Proficient in a wide range of modern technologies and frameworks,
         including but not limited to:

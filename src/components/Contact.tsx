@@ -34,6 +34,9 @@ const Contact: React.FC = () => {
       id="contact"
       className="w-full bg-[#020021] py-24 px-4 flex flex-col items-center"
     >
+      {/* ===== White Glow Overlay (Added Here) ===== */}
+      <div className="absolute left-14/24 top-21/4 w-[170px] h-[170px] bg-white/20 rounded-full blur-[150px] z-0"></div>
+      {/* ===== End White Glow Overlay ===== */}
       <h2 className="text-3xl sm:text-4xl font-bold text-white mb-10 text-center">
         Get in <span className="text-orange-400">Touch</span>
       </h2>

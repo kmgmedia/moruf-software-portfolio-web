@@ -7,6 +7,9 @@ const Hero: React.FC = () => {
       id="home"
       className="flex flex-col items-center justify-center min-h-[100vh] pt-32 pb-16 px-4 text-center bg-[#020021] w-full"
     >
+      <div className="absolute inset-0 flex justify-end">
+        <div className="absolute left-2/8 top-1/4 w-[300px] h-[300px] bg-white/20 rounded-full blur-[110px] z-0"></div>
+      </div>
       <div className="flex flex-col items-center mb-4">
         <Image
           src="/assets/Ellipse 133.png"

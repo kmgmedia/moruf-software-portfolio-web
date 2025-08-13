@@ -36,9 +36,13 @@ const About: React.FC = () => {
       </div>
 
       {/* About Me and Image Section */}
+
       <div className="flex flex-col md:flex-row items-center justify-center gap-20">
         {/* About Me Text */}
         <div className="max-w-2xl text-center md:text-left">
+          {/* ===== White Glow Overlay (Added Here) ===== */}
+          <div className="absolute left-2/12 top-4/4 w-[250px] h-[250px] bg-white/20 rounded-full blur-[110px] z-0"></div>
+          {/* ===== End White Glow Overlay ===== */}
           <h3 className="text-4xl sm:text-6xl font-bold text-[#9ea3ae] mb-4">
             Let’s get to know about me closer
           </h3>
