@@ -90,7 +90,7 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu Drawer */}
       {isMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-black/80 backdrop-blur-md flex flex-col items-center py-6 gap-10 md:hidden">
+        <div className="absolute top-full left-0 w-full bg-black/90 backdrop-blur-md flex flex-col items-center py-6 gap-10 md:hidden">
           {navLinks.map((link) => {
             const isContact = link.name === "Contact";
             return (
