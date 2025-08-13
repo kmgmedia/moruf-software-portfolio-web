@@ -18,7 +18,7 @@ const projects = [
       "GitHub Action",
       "Vercel",
     ],
-    live: "", // No Live link → Live button will be hidden
+    live: "",
     github: "https://github.com/kmgmedia/byway_backend",
     buttonStyles: {
       live: "bg-blue-500 hover:bg-blue-600 text-white",
@@ -145,7 +145,9 @@ const Projects: React.FC = () => {
               <p className="text-[#9ea3ae] mb-3 text-base font-semibold">
                 {project.description}
               </p>
-              <p className="text-[#9ea3ae] mb-6 text-sm">{project.details}</p>
+              <div className="text-[#9ea3ae] mb-6 text-sm">
+                {project.details}
+              </div>
 
               {/* Tech stack */}
               <div className="flex flex-wrap gap-2 mb-12">
