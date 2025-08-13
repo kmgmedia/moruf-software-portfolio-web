@@ -124,9 +124,9 @@ const Projects: React.FC = () => {
   return (
     <section
       id="projects"
-      className=" w-full bg-gray-900 py-30 px-4 flex flex-col items-center"
+      className="w-full bg-gray-900 py-30 px-4 flex flex-col items-center"
     >
-      <div className="">
+      <div>
         <h2 className="text-3xl sm:text-4xl font-bold text-white mb-2 text-center">
           Select <span className="text-orange-400">Projects</span>
         </h2>
@@ -134,7 +134,7 @@ const Projects: React.FC = () => {
           Handpicked projects reflecting my journey in tech and design.
         </h3>
         <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-16">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <div
               key={project.title}
               className="bg-[#212936] max-w-6xl rounded-xl shadow-lg p-8 flex flex-col items-start border border-orange-400/20"
