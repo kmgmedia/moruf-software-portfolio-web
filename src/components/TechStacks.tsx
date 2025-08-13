@@ -105,7 +105,7 @@ const TechStacks: React.FC = () => {
         Proficient in a wide range of modern technologies and frameworks,
         including but not limited to:
       </h3>
-      <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-2 mb-12">
+      <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
         {stacks.map((stack) => (
           <div
             key={stack.title}
