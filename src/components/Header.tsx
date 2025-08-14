@@ -13,7 +13,7 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="w-full flex items-center justify-between px-12 py-6 bg-transparent fixed top-4 left-0 z-30 backdrop-blur-md">
+    <header className="w-full flex items-center justify-between px-12 py-6 bg-transparent fixed top-0 left-0 z-30 backdrop-blur-md">
       {/* Logo */}
       <a href="#home" className="flex items-center gap-3">
         <Image
